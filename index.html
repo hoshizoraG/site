@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Encore Plus Moche</title>
+    <style>
+        /* Réinitialisation des marges et du padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Comic Sans MS", sans-serif;
+            text-align: center;
+            color: yellow; /* Texte jaune fluo */
+            animation: flashText 1s infinite alternate; /* Texte qui clignote */
+            overflow: hidden;
+        }
+
+        @keyframes flashText {
+            0% { color: yellow; }
+            100% { color: red; }
+        }
+
+        /* Fond dégradé animé */
+        body {
+            background: linear-gradient(45deg, red, blue, lime, yellow, purple);
+            background-size: 400% 400%;
+            animation: gradientBG 5s infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Conteneur du GIF */
+        .gif-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        /* Image GIF */
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 20px dotted cyan; /* Bordure flashy */
+            animation: spin 3s infinite linear; /* Rotation du GIF */
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Pour les petits écrans, on ajuste la taille du texte */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+
+            img {
+                max-width: 80%; /* Limite la taille du GIF sur les petits écrans */
+            }
+        }
+
+        /* Pour les très petits écrans (comme les téléphones en mode portrait) */
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+
+            img {
+                max-width: 90%; /* Le GIF sera encore plus petit */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gif-container">
+        <img src="watermelon.gif" alt="Un GIF encore plus moche">
+    </div>
+    <audio autoplay loop>
+        <source src="https://www.soundjay.com/button/beep-07.wav" type="audio/wav">
+        Ton navigateur ne supporte pas l'audio (mais ça reste horrible).
+    </audio>
+</body>
+</html>
