@@ -17,10 +17,11 @@
             text-align: center;
             color: cyan; /* Texte cyan fluo */
             animation: flashText 1s infinite alternate; /* Texte qui clignote */
-            overflow: hidden;
+            overflow: auto; /* Permet de faire défiler la page si nécessaire */
             background: linear-gradient(120deg, orange, purple, green, pink, turquoise);
             background-size: 500% 500%;
             animation: gradientBG 8s infinite;
+            min-height: 100vh; /* Assure que la page couvre toute la hauteur */
         }
 
         @keyframes flashText {
@@ -38,7 +39,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
             padding: 20px;
         }
 
@@ -60,7 +60,7 @@
             border: 5px solid purple;
             padding: 20px;
             font-size: 25px;
-            margin: 30px;
+            margin: 20px;
             cursor: pointer;
             transition: transform 0.3s;
         }
@@ -126,6 +126,27 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+
+        /* Assure que tout reste visible sur petits écrans */
+        @media (max-width: 768px) {
+            .button, .rainbow-button {
+                font-size: 18px;
+                padding: 15px;
+            }
+
+            .gif-container img {
+                max-width: 90%; /* Réduit la taille du GIF sur petits écrans */
+            }
+
+            .mystery-box {
+                width: 120px;
+                height: 120px;
+            }
+
+            .nonsense-text {
+                font-size: 40px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -138,21 +159,21 @@
         Ton navigateur ne supporte pas l'audio (mais ça reste horrible).
     </audio>
 
-    <h1 class="banana-text">LA BANANE MYSTIQUE</h1>
+    <h1 class="banana-text">LE BANANE MYSTIQUE</h1>
 
-    <button class="button">Cliquez ici pour voir un arc-en-ciel exploser !</button>
-    <button class="button">Appuie pour invoquer un chat invisible !</button>
-    <button class="rainbow-button">Clique pour voir un poisson voler !</button>
+    <button class="button">raison sec</button>
+    <button class="button">maçon du coeur</button>
+    <button class="rainbow-button">tu te rends</button>
 
     <div class="mystery-box"></div>
 
     <div class="nonsense-text">Le fromage est-il carré ?</div>
 
-    <button class="button">Appuie pour que la pluie de chocolat commence !</button>
+    <button class="button">skibidi beurre</button>
 
     <div class="mystery-box"></div>
 
     <h2>Un hamster gouverne la planète Mars</h2>
-    <p>Pourquoi ? Parce qu'il a une cape et un chapeau.</p>
+    <p>Pourquoi</p>
 </body>
 </html>
